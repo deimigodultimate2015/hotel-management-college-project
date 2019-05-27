@@ -1,0 +1,18 @@
+.date-picker {
+	-fx-border-color: #2e68cc;
+	-fx-border-width: 0 0 2 0;
+	-fx-background-color: transparent;
+}
+
+.date-picker > .text-field {
+	-fx-text-fill: #2e68cc;
+}
+
+.date-picker > .date-picker-display-node {
+    -fx-background-color: transparent;
+}
+
+.date-picker > .arrow-button {
+	-fx-background-color: #2e68cc;
+	-fx-margin : 0px;
+}

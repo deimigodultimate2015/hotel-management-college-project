@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ui.Invoice">
+   <children>
+      <Pane prefHeight="64.0" prefWidth="1000.0" stylesheets="@../css/title_pane.css">
+         <children>
+            <Label layoutX="388.0" layoutY="12.0" text="Chi tiết đặt phòng" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnExit" layoutX="26.0" layoutY="16.0" mnemonicParsing="false" stylesheets="@../css/transparent_button.css">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/iconmonstr-arrow-72-24.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <BorderPane layoutY="64.0" prefHeight="632.0" prefWidth="1000.0">
+         <center>
+            <Pane prefHeight="613.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="42.0" layoutY="24.0" text="Thông tin khách hàng">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="385.0" layoutY="24.0" text="Thông tin đặt phòng">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="746.0" layoutY="24.0" text="Thông tin hóa đơn">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCusId" layoutX="42.0" layoutY="45.0" text="Mã : CUS00000">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCusName" layoutX="42.0" layoutY="64.0" text="Tên : Thái Xuân Thọ">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPhone" layoutX="42.0" layoutY="83.0" text="Số điện thoại : 01664427840">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblReservId" layoutX="386.0" layoutY="46.0" text="Mã : 15" />
+                  <Label fx:id="lblCOut" layoutX="386.0" layoutY="65.0" text="Ngày đặt : 04/12/2013" />
+                  <Label fx:id="lblCIn" layoutX="386.0" layoutY="84.0" text="Ngày trả : 04/12/1890" />
+                  <Label fx:id="lblEmail" layoutX="42.0" layoutY="101.0" text="Email : deimigodultimate2015@gmail.com">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTogether" layoutX="386.0" layoutY="120.0" text="Số người đi cùng : 5" />
+                  <Label fx:id="lblInvId" layoutX="746.0" layoutY="46.0" text="Mã : INV00000" />
+                  <Label fx:id="lblInvDate" layoutX="746.0" layoutY="65.0" text="Ngày in : 04/13/BC980" />
+                  <Label fx:id="lblEmpId" layoutX="746.0" layoutY="84.0" text="Mã nhân viên : EMP00000" />
+                  <TableView fx:id="tblRoom" layoutX="14.0" layoutY="191.0" prefHeight="141.0" prefWidth="943.0" stylesheets="@../css/table_view.css">
+                    <columns>
+                      <TableColumn fx:id="clm1RoomNumber" prefWidth="75.0" sortable="false" text="Phòng số" />
+                      <TableColumn fx:id="clm1Type" prefWidth="75.0" sortable="false" text="Loại phòng" />
+                        <TableColumn fx:id="clm1Note" prefWidth="75.0" sortable="false" text="Tiện nghi" />
+                        <TableColumn fx:id="clm1Price" prefWidth="75.0" sortable="false" text="Giá" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="160.0" prefHeight="31.0" prefWidth="236.0" stylesheets="@../css/title_blue_background.css" text="Chi tiết phòng">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lbl1Total" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="332.0" prefHeight="31.0" prefWidth="943.0" stylesheets="@../css/title_blue_background.css" text="Thành tiền">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <TableView fx:id="tblServ" layoutX="14.0" layoutY="424.0" prefHeight="163.0" prefWidth="943.0" stylesheets="@../css/table_view.css">
+                     <columns>
+                        <TableColumn fx:id="clm2Date" prefWidth="75.0" sortable="false" text="Ngày đặt" />
+                        <TableColumn fx:id="clm2Id" prefWidth="75.0" sortable="false" text="Mã dịch vụ" />
+                        <TableColumn fx:id="clm2Name" prefWidth="75.0" sortable="false" text="Tên dịch vụ" />
+                        <TableColumn fx:id="clm2Type" prefWidth="75.0" sortable="false" text="Loại dịch vụ" />
+                        <TableColumn fx:id="clm2Price" prefWidth="75.0" sortable="false" text="Giá tiền" />
+                        <TableColumn fx:id="clm2Amount" prefWidth="75.0" sortable="false" text="Số lượng" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="393.0" prefHeight="31.0" prefWidth="236.0" stylesheets="@../css/title_blue_background.css" text="Chi tiết dịch vụ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lbl2Total" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="587.0" prefHeight="31.0" prefWidth="943.0" stylesheets="@../css/title_blue_background.css" text="Thành tiền">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lblTotalDay" layoutX="386.0" layoutY="102.0" text="Tổng số ngày thuê: 1" />
+                  <Button fx:id="btnExport" layoutX="746.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" stylesheets="@../css/login_button.css" text="Xuất hóa đơn">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/iconmonstr-printer-1-16.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</Pane>
